@@ -1,0 +1,51 @@
+#painelUsuarios thead th:first-child {
+  width: 20em;
+}
+#painelAreas thead th:first-child {
+  width: 10em;
+}
+#painelAreas thead th:last-child {
+  width: 7em;
+}
+#painelCursos thead th:first-child {
+  width: 30em;
+}
+
+@media (max-width: 768px) {
+  #tabela thead th:not(:first-child):not(:last-child),
+  #tabela tbody td:not(:first-child):not(:last-child) {
+    display: none;
+  }
+}
+
+#painelCursos header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#painelCursos header > fieldset {
+  margin-top: 1em;
+  display: flex;
+  justify-content: end;
+}
+
+.arquivado td {
+  color: var(--pico-color-slate-200);
+}
+
+#painelCursos #tabela td:nth-child(4),
+#painelCursos #tabela td:nth-child(5) {
+  text-align: center;
+}
+
+#tabelaCursosUsuario th:not(:first-child) {
+  width: 4em;
+}
+
+.tabelaComRolagem {
+  /* overflow-y: auto; */
+  /* height: 15em; */
+  font-size: smaller;
+}

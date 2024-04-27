@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Curso - Competentia</title>
+    <meta name="description" content="Mapa de Competências - PUC Minas" />
+    <script defer src="./scripts/dados.js"></script>
+    <script defer src="./services/usuarios-service.js"></script>
+    <script defer src="./services/cursos-service.js"></script>
+    <script defer src="./services/cursos-usuarios-service.js"></script>
+    <script defer src="./services/areas-service.js"></script>
+    <script defer src="./scripts/scripts.js"></script>
+    <script defer src="./scripts/curso.js"></script>
+    <link rel="stylesheet" href="./estilos/pico.min.css" />
+    <link rel="stylesheet" href="./estilos/pico.colors.min.css" />
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <link rel="stylesheet" href="./estilos/curso.css" />
+  </head>
+
+  <body class="container">
+    <!-- Header -->
+    <header id="cabecalho">
+      <span class="logo">
+        <a href="./index.html">
+          <img src="./imagens/pucminas.png" width="120" />
+        </a>
+      </span>
+      <h1 id="appName"></h1>
+      <nav>
+        <ul id="topMenu">
+          <li>
+            <details class="dropdown">
+              <summary class="secondary" id="nomeUsuarioLogado"></summary>
+              <ul>
+                <li><a href="#" id="btnLogout">Sair</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <main class="has-side-menu">
+      <div id="menuToggle"><img src="./imagens/menu.svg" /></div>
+      <header>
+        <h2 id="nomeCurso"></h2>
+        <hr />
+      </header>
+
+      <aside id="sideMenu">
+        <article>
+          <!-- class="pico-background-indigo-50" -->
+          <nav id="navMenuCursos"></nav>
+        </article>
+      </aside>
+
+      <!-- Conteúdo do curso -->
+      <section>
+        <div id="dadosCurso">
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">Grau:</th>
+                <td id="grauCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Modalide:</th>
+                <td id="modalidadeCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Semestres:</th>
+                <td id="semestresCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Área:</th>
+                <td id="areaCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Versão:</th>
+                <td id="versaoCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Ano:</th>
+                <td id="anoCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Editores:</th>
+                <td id="editoresCurso"></td>
+              </tr>
+              <tr>
+                <th scope="row">Observações:</th>
+                <td id="observacoesCurso"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

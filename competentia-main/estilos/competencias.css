@@ -1,0 +1,29 @@
+#tabela thead th:first-child {
+  width: 5em;
+}
+#tabela thead th:nth-child(2) {
+  width: 40em;
+}
+#tabela thead th:nth-child(3) {
+  width: 10em;
+}
+
+@media (max-width: 768px) {
+  #tabela thead th:nth-child(3),
+  #tabela tbody td:nth-child(3) {
+    display: none;
+  }
+}
+
+#tabela td {
+  vertical-align: top;
+}
+
+#modalCriaCompetencia footer {
+  justify-content: space-between;
+}
+
+#modalCriaCompetencia footer :first-child {
+  justify-content: space-between;
+  margin-left: 0;
+}

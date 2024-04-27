@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Relatório de Competências - Competentia</title>
+    <meta name="description" content="Mapa de Competências - PUC Minas" />
+    <script src="./scripts/jspdf.umd.min.js"></script>
+    <script src="./scripts/jspdf.plugin.autotable.js"></script>
+    <script defer src="./scripts/dados.js"></script>
+    <script defer src="./services/usuarios-service.js"></script>
+    <script defer src="./services/cursos-service.js"></script>
+    <script defer src="./services/cursos-usuarios-service.js"></script>
+    <script defer src="./services/areas-service.js"></script>
+    <script defer src="./services/competencias-service.js"></script>
+    <script defer src="./services/competencias-cursos-service.js"></script>
+    <script defer src="./services/componentescompetencias-service.js"></script>
+    <script
+      defer
+      src="./services/componentescompetencias-competencias-service.js"
+    ></script>
+    <script
+      defer
+      src="./services/componentescompetencias-componentescurriculares-service.js"
+    ></script>
+    <script defer src="./scripts/scripts.js"></script>
+    <script defer src="./scripts/relatorio-competencias.js"></script>
+    <link rel="stylesheet" href="./estilos/pico.min.css" />
+    <link rel="stylesheet" href="./estilos/pico.colors.min.css" />
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <link rel="stylesheet" href="./estilos/relatorios.css" />
+  </head>
+
+  <body class="container">
+    <!-- Header -->
+    <header id="cabecalho">
+      <span class="logo">
+        <a href="./index.html">
+          <img src="./imagens/pucminas.png" width="120" />
+        </a>
+      </span>
+      <h1 id="appName"></h1>
+      <nav>
+        <ul id="topMenu">
+          <li>
+            <details class="dropdown">
+              <summary class="secondary" id="nomeUsuarioLogado"></summary>
+              <ul>
+                <li><a href="#" id="btnLogout">Sair</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <main class="has-side-menu">
+      <div id="menuToggle"><img src="./imagens/menu.svg" /></div>
+      <header>
+        <h2 id="nomeCurso"></h2>
+        <hr />
+      </header>
+
+      <aside id="sideMenu">
+        <article><nav id="navMenuCursos"></nav></article>
+      </aside>
+
+      <!-- Conteúdo central -->
+      <section>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1.5em;
+          "
+        >
+          <h4>COMPETÊNCIAS</h4>
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <label style="margin-left: 2em; margin-right: 2em">
+              <input id="btnMostraDescricao" type="checkbox" role="switch" />
+              Mostrar descrições
+            </label>
+            <button id="btnImprimir">Imprimir</button>
+          </div>
+        </div>
+        <section id="listaCompetencias"></section>
+      </section>
+    </main>
+  </body>
+</html>

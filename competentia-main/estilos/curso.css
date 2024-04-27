@@ -1,0 +1,11 @@
+#dadosCurso th {
+  font-weight: bold;
+  width: 7em;
+}
+
+#dadosCurso th,
+#dadosCurso td {
+  /* background-color: transparent; */
+  vertical-align: top;
+  border-bottom: none;
+}
